@@ -1,0 +1,43 @@
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Full height of the parent container */
+}
+
+.loading-spinner svg {
+  animation: rotate 1s linear infinite; /* Rotating animation for the SVG */
+}
+
+.moving-circle {
+  animation: dash 1.5s linear infinite; /* Smooth moving animation for the inner circle */
+  stroke-dasharray: 60; /* Shorter length for smoother animation */
+  stroke-dashoffset: 0;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 0; /* Start of the circle */
+  }
+  25% {
+    stroke-dashoffset: 10; /* Move partway around */
+  }
+  50% {
+    stroke-dashoffset: 10; /* Hold at this point */
+  }
+  75% {
+    stroke-dashoffset: 0; /* Move back to the start */
+  }
+  100% {
+    stroke-dashoffset: 0; /* Complete the cycle */
+  }
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  background: #F2F4F8;
+  max-width: 37.5625rem; /* Limit to max width */
+  height: 2%; /* Maintain the height */
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: border-color 0.3s ease;
+  margin:2px;
+}
+
+.search-bar-container.active {
+  border: 2px solid #6833FF;
+}
+
+.search-bar-container.error {
+  border: 2px solid red;
+}
+
+.search-icon {
+  color: black;
+  margin-right: 0.5rem;
+}
+
+.search-bar {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  font-family: 'Poppins', sans-serif; /* Set the font family to Poppins */
+  background: #F2F4F8;
+}
+
+.search-bar::placeholder {
+  color: gray;
+}
+
+.search-bar:focus {
+  border-color: #3b82f6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .search-bar-container {
+    width: 80%; /* Reduce width for smaller screens */
+    padding: 1rem;
+  }
+  .search-bar {
+    font-size: 0.875rem; /* Smaller font size on mobile */
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar-container {
+    width: 80%; /* Further reduce for mobile screens */
+    padding: 0.75rem;
+    height: 3.5rem; /* Adjust height for smaller screens */
+  }
+
+  .search-bar {
+    font-size: 0.875rem; /* Smaller font size on mobile */
+    width: 80%;
+  }
+}

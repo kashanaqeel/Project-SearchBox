@@ -1,0 +1,108 @@
+.result-item {
+  display: flex;
+  justify-content: space-between; /* Adjust to space out the content and icon */
+  align-items: center; /* Align items vertically centered */
+  width: 100%; /* Make it take full width of the container */
+  max-width: 90%; /* Limit to the maximum width */
+  height: auto; /* Let the height adjust automatically */
+  padding: 0.75rem 1.25rem;
+  gap: 1rem;
+  border-radius: 0.75rem;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Remove underline from link */
+  color: inherit; /* Inherit color from parent element */
+}
+
+.result-item:hover {
+  background: #F2F4F8;
+}
+
+.result-item-image {
+  width: 3.5rem; /* Fixed width for the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 0.5rem;
+}
+
+.result-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+  align-items: flex-start;
+}
+
+.result-item-title {
+  margin: 0;
+  font-size: 1rem; /* Adjust font size for title */
+}
+
+.result-item-description {
+  margin: 0;
+  font-size: 0.875rem; /* Smaller font size for description */
+  color: #666;
+}
+
+/* Link icon styles */
+.link-icon-container {
+  opacity: 0; /* Hide by default */
+  transition: opacity 0.3s ease; /* Smooth transition for the opacity */
+  margin-left: auto; /* Push the icon to the right */
+}
+
+.result-item:hover .link-icon-container {
+  opacity: 1; /* Show on hover */
+}
+
+.link-icon {
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Maintain aspect ratio */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .result-item {
+    width: 90%; /* Reduce width for tablets */
+    gap: 1rem; /* Reduce gap between items */
+    padding: 0.5rem 1rem; /* Adjust padding */
+  }
+
+  .result-item-content {
+    margin-left: 0.75rem; /* Reduce margin between image and content */
+  }
+
+  .result-item-title {
+    font-size: 0.9375rem; /* Slightly smaller title font for tablets */
+  }
+
+  .result-item-description {
+    font-size: 0.8125rem; /* Smaller description font for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .result-item {
+    width: 90%; /* Take full width for mobile */
+    padding: 0.5rem; /* Reduce padding for mobile */
+    flex-direction: row; /* Stack items vertically on mobile */
+    align-items: flex-start; /* Align content to the start */
+    gap: 0.5rem; /* Smaller gap between items */
+  }
+
+  .result-item-image {
+    width: 20%; /* Image takes full width on mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .result-item-content {
+    margin-left: 0; /* No margin needed in vertical layout */
+  }
+
+  .result-item-title {
+    font-size: 0.875rem; /* Adjust font size for mobile */
+  }
+
+  .result-item-description {
+    font-size: 0.75rem; /* Smaller font size for mobile */
+  }
+}

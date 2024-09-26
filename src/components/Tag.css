@@ -1,0 +1,32 @@
+.tag-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.5rem;
+  height: 1.75rem;
+  padding: 0.375rem 1rem;
+  margin: 0.3rem;
+  border-radius: 2.5rem;
+  background-color: #e0e7ff;
+  color: #6833FF;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none; /* Remove default button border */
+}
+
+.tag-button:hover {
+  background-color: #6833FF;
+  color: white;
+}
+.tag-icon {
+  margin-right: 0.2rem; /* Space between icon and label */
+  width: 1rem; /* Adjust icon size as needed */
+  height: auto; /* Maintain aspect ratio */
+  transition: filter 0.3s ease; /* Smooth transition for filter */
+}
+
+.tag-button:hover .tag-icon {
+  filter: brightness(0) invert(1); /* Invert colors to make it white */
+}

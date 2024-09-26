@@ -1,0 +1,53 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Take up the full height of the viewport */
+  background-color: #EDF2F7;
+  overflow: hidden; /* Prevent any scrolling */
+}
+
+.App-header {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-top:8%;
+  height: 100%; /* Ensure the header takes full space available */
+  width: 100%;
+}
+
+.App-footer {
+  display: flex;
+  justify-content: space-between; /* Timer on the left, logo on the right */
+  align-items: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: transparent; /* Use transparent or a specific bg if needed */
+  position: relative;
+}
+
+.timer {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.footer-logo {
+  width: 5.125rem; /* Adjust width */
+  height: auto;
+  margin-right: 1rem; /* Space between logo and edge */
+}
+
+@media (max-width: 768px) {
+  .footer-logo {
+    width: 4rem; /* Smaller logo on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    width: 3rem; /* Further reduce size */
+  }
+}
